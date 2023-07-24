@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/marcocampisi/Developer/vite-vue-template/src/assets/scss",
+      "program": "/Users/marcocampisi/Developer/vite-vue-template/src/assets/scss/build/Debug/outDebug"
+    }
+  ]
+}

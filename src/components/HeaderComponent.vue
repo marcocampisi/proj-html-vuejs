@@ -1,8 +1,12 @@
 <script>
-import {store} from '../store.js';
+import { store } from '../store.js';
+import JumboComponent from "./JumboComponent.vue";
 
 export default {
     name: "HeaderComponent",
+    components: {
+        JumboComponent
+    },
     data() {
         return {
             store
@@ -14,7 +18,7 @@ export default {
 <template>
     <header>
         <nav class="navbar">
-            <div class="container-fluid d-flex align-items-center">
+            <div class="container-fluid d-flex align-items-center justify-content-between">
                 <a class="navbar-brand" href>
                     <img src="../assets/img/logo-light.png" alt="iAcademy" width="200px" class="mx-5">
                 </a>
@@ -40,17 +44,22 @@ export default {
             </div>
         </nav>
     </header>
+    <JumboComponent/>
 </template>
 
 <style lang="scss" scoped>
 nav {
-    background-color: aquamarine;
+    position: absolute;
+    width: 100vw;
 
     li {
         list-style-type: none;
         color: white;
         margin: 0 10px;
         cursor: pointer;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: .8rem;
     }
 }
 </style>

@@ -1,1 +1,1 @@
-# vite-vue-template
+# proj-html-vuejs

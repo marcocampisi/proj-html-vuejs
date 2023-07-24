@@ -18,7 +18,9 @@ export default {
 </script>
 
 <template>
-
+    <HeaderComponent />
+    <MainComponent />
+    <FooterComponent />
 </template>
 
 <style scoped>

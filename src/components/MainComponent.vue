@@ -1,9 +1,10 @@
 <script>
+import { store } from '../store.js';
 export default{
     name: "MainComponent",
     data() {
         return {
-
+            store
         }
     }
 }

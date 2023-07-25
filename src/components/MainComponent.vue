@@ -43,7 +43,7 @@ export default {
             </div>
         </div>
         <div class="container d-flex flex-column">
-            <h2 class="fw-bold">The Trusted Name for In-Home Tutoring.</h2>
+            <h2 class="fw-bold w-25">The Trusted Name for In-Home Tutoring.</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aliquid debitis dignissimos
                 maiores recusandae repellat rerum sequi ullam unde.</p>
             <button class="btn">Learn more</button>
@@ -55,10 +55,37 @@ export default {
                 <p>TOP</p>
             </div>
         </div>
+        <div class="container-fluid d-flex align-items-center">
+            <img src="../assets/img/h5-img-2.jpg" alt="" class="w-50">
+            <div class="textContainer px-5">
+                <h2 class="fw-bold w-50">Empowering Children to Reach Their Potential.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi in nostrum nulla numquam
+                    quae quam quo tempora tenetur vitae.</p>
+                <div class="statistics d-flex">
+                    <div class="me-5">
+                        <h3>168</h3>
+                        <p>User Stories</p>
+                    </div>
+                    <div>
+                        <h3>347</h3>
+                        <p>Events</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column topButton" style="top: 90%">
+                <font-awesome-icon icon="fa-solid fa-chevron-up" class="w-100"></font-awesome-icon>
+                <p>TOP</p>
+            </div>
+        </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
+h2 {
+    font-family: "Times New Roman", 'serif';
+    font-size: 2em;
+}
+
 .subjects-container {
     display: flex;
     justify-content: space-around;
@@ -82,12 +109,6 @@ export default {
 }
 
 .container {
-    > h2 {
-        font-family: "Times New Roman", 'serif';
-        font-size: 2em;
-        width: 25%;
-    }
-
     > button {
         color: #40c4ff;
         text-transform: uppercase;
@@ -118,6 +139,20 @@ export default {
         cursor: pointer;
         font-size: small;
         font-weight: bold;
+    }
+
+    .statistics {
+        color: #40c4ff;
+
+        h3 {
+            font-family: "Times New Roman", 'serif';
+            font-weight: bold;
+            font-size: 3rem;
+        }
+
+        p {
+            font-family: "Times New Roman", 'serif';
+        }
     }
 }
 </style>

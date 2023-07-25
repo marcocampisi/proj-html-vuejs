@@ -27,6 +27,10 @@ export default {
     height: 600px;
     background-image: url('../assets/img/h5-slide-3-background.jpg');
 
+    > h1 {
+        font-family: "Times New Roman", 'serif'
+    }
+
     > button {
         background-color: #40c4ff;
         border: none;

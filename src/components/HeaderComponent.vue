@@ -62,4 +62,8 @@ nav {
         font-size: .8rem;
     }
 }
+
+JumboComponent {
+    position: relative;
+}
 </style>

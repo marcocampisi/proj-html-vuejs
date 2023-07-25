@@ -31,10 +31,6 @@ export default {
         background-color: #40c4ff;
         border: none;
         border-radius: 0px;
-
-        &:hover {
-            filter: alpha(.2);
-        }
     }
 }
 </style>

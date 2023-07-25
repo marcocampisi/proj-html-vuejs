@@ -14,7 +14,47 @@ export default {
                 'Chemistry',
                 'Science',
                 'DIY & Craft'
-            ]
+            ],
+            rows: [
+                {
+                    id: 1,
+                    title: 'What We Do',
+                    content: 'Lorem ipsum',
+                    isActive: false
+                },
+                {
+                    id: 2,
+                    title: 'Degree Programme',
+                    content: 'Lorem ipsum',
+                    isActive: false
+                },
+                {
+                    id: 3,
+                    title: 'Career Achievements',
+                    content: 'Lorem ipsum',
+                    isActive: false
+                },
+                {
+                    id: 4,
+                    title: 'Personal Management',
+                    content: 'Lorem ipsum',
+                    isActive: false
+                },
+                {
+                    id: 5,
+                    title: 'Steps to Success',
+                    content: 'Lorem ipsum',
+                    isActive: false
+                },
+                {
+                    id: 6,
+                    title: 'Knowledge Transfer',
+                    content: 'Lorem ipsum',
+                    isActive: false
+                }
+
+            ],
+            activeRowIndex: 0
         }
     },
     computed: {
@@ -29,6 +69,11 @@ export default {
     methods: {
         getImagePath(imageNum) {
             return `../src/assets/img/h5-custom-icon-${imageNum}.png`;
+        },
+        activeRow(clickedRow) {
+            this.rows.forEach((row) => {
+                row.isActive = row.id === clickedRow.id;
+            });
         }
     }
 }
@@ -90,6 +135,15 @@ export default {
                     <span><font-awesome-icon icon="fa-solid fa-circle"></font-awesome-icon></span>
                     <span><font-awesome-icon icon="fa-solid fa-circle"></font-awesome-icon></span>
                 </div>
+            </div>
+        </div>
+        <div class="container-fluid d-flex py-5">
+            <div id="selectInfo">
+                <ul class="left-column">
+                    <li v-for="row in rows" :key="row.id" @click="activeRow(row)" :class="{ 'active': row.isActive }">
+                        {{ row.title }}
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -196,6 +250,26 @@ h2 {
 
             &:not(:nth-child(2)) {
                 opacity: 0.5;
+            }
+        }
+    }
+}
+
+#selectInfo {
+    .left-column {
+        li {
+            list-style-type: none;
+            padding: 20px 30px;
+            border: 1px solid #f2f2f2;
+            color: #595959;
+            cursor: pointer;
+            font-family: "Times New Roman", 'serif';
+            font-weight: bold;
+
+            &.active {
+                background-color: #fbfbfc;
+                border-left: 5px solid #40c4ff;
+                color: #40c4ff;
             }
         }
     }

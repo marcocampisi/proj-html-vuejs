@@ -48,6 +48,13 @@ export default {
                 maiores recusandae repellat rerum sequi ullam unde.</p>
             <button class="btn">Learn more</button>
         </div>
+        <div class="container-fluid">
+            <img src="../assets/img/h5-img-1.jpg" alt="">
+            <div class="d-flex flex-column topButton">
+                <font-awesome-icon icon="fa-solid fa-chevron-up" class="w-100"></font-awesome-icon>
+                <p>TOP</p>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -88,6 +95,29 @@ export default {
         font-size: small;
         align-self: start;
         padding: 0;
+    }
+}
+
+.container-fluid {
+    position: relative;
+
+    > img {
+        width: 100%;
+    }
+
+    .topButton {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: #40c4ff;
+        text-align: center;
+        color: white;
+        padding-top: 10px;
+        cursor: pointer;
+        font-size: small;
+        font-weight: bold;
     }
 }
 </style>

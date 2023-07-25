@@ -77,6 +77,21 @@ export default {
                 <p>TOP</p>
             </div>
         </div>
+        <div class="container-fluid d-flex align-items-center" id="instructorContainer">
+            <div class="container d-flex flex-column align-items-center text-white">
+                <img src="../assets/img/instructor-img-6.jpg" alt="" class="my-5">
+                <p class="px-5 py-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quos repudiandae
+                    sint totam. Consectetur delectus doloribus eaque est fuga, harum maiores, molestiae optio, quas
+                    quasi quidem reiciendis rem suscipit voluptate?</p>
+                <h4>Joan Collins</h4>
+                <h5 class="text-uppercase">Student</h5>
+                <div class="my-4">
+                    <span><font-awesome-icon icon="fa-solid fa-circle"></font-awesome-icon></span>
+                    <span><font-awesome-icon icon="fa-solid fa-circle"></font-awesome-icon></span>
+                    <span><font-awesome-icon icon="fa-solid fa-circle"></font-awesome-icon></span>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -152,6 +167,36 @@ h2 {
 
         p {
             font-family: "Times New Roman", 'serif';
+        }
+    }
+}
+
+#instructorContainer {
+    background-image: url("../assets/img/h5-parallax-img-1.png");
+    height: 800px;
+
+    .container {
+        > img {
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        > h4 {
+            font-size: 2rem;
+            font-family: "Times New Roman", 'serif';
+        }
+
+        > h5 {
+            font-size: smaller;
+            font-weight: bolder;
+        }
+
+        span {
+            margin: 0 10px;
+
+            &:not(:nth-child(2)) {
+                opacity: 0.5;
+            }
         }
     }
 }

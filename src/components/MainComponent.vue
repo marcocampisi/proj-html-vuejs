@@ -53,6 +53,39 @@ export default {
                     isActive: false
                 }
 
+            ],
+            courses: [
+                {
+                    id: 1,
+                    title: 'Android Developer',
+                    instructor: 'David Sanders',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cumque ducimus fugit minima minus mollitia natus quas quasi quos tempora.',
+                    enrollments: 1,
+                    category: 'Programming',
+                    isFree: true,
+                    image: '../src/assets/img/course-5-f-img.jpg',
+                },
+                {
+                    id: 2,
+                    title: 'Web Designing',
+                    instructor: 'Jennifer Powell',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cumque ducimus fugit minima minus mollitia natus quas quasi quos tempora.',
+                    enrollments: 1,
+                    category: 'Programming',
+                    isFree: true,
+                    image: '../src/assets/img/course-6-f-img.jpg',
+                },
+                {
+                    id: 3,
+                    title: 'Financial Modeling',
+                    instructor: 'Edward Bowman',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cumque ducimus fugit minima minus mollitia natus quas quasi quos tempora.',
+                    enrollments: 1,
+                    category: 'Business',
+                    isFree: false,
+                    price: '$20',
+                    image: '../src/assets/img/course-12-f-img.jpg',
+                }
             ]
         }
     },
@@ -129,7 +162,7 @@ export default {
                     quasi quidem reiciendis rem suscipit voluptate?</p>
                 <h4>Joan Collins</h4>
                 <h5 class="text-uppercase">Student</h5>
-                <div class="my-4">
+                <div class="my-4 dots">
                     <span><font-awesome-icon icon="fa-solid fa-circle"></font-awesome-icon></span>
                     <span><font-awesome-icon icon="fa-solid fa-circle"></font-awesome-icon></span>
                     <span><font-awesome-icon icon="fa-solid fa-circle"></font-awesome-icon></span>
@@ -154,6 +187,40 @@ export default {
                 <p><span>&check;</span> Maximizing potential through individual attention.</p>
                 <p><span>&check;</span> The trusted name for specialized training.</p>
                 <p><span>&check;</span> People teach. People learn. This is where they connect.</p>
+                <img src="../assets/img/h12-tabs-icon-1.png" alt="">
+            </div>
+            <div class="d-flex flex-column topButton" style="top: 10px">
+                <font-awesome-icon icon="fa-solid fa-chevron-up" class="w-100"></font-awesome-icon>
+                <p>TOP</p>
+            </div>
+        </div>
+        <div class="container-fluid d-flex flex-column align-items-center justify-content-center courses-container">
+            <h2 class="fw-bold mt-5 mb-3">Popular Online Courses</h2>
+            <p class="px-5 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus earum perspiciatis quidem soluta tempore! Culpa nemo nostrum optio provident voluptatem!</p>
+            <div class="row my-5">
+                <div class="col-4 px-5" v-for="course in courses" :key="course.id">
+                    <div class="card">
+                        <img :src="course.image" class="card-img-top" :alt="course.title">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ course.title }}</h5>
+                            <h6 class="card-subtitle mb-4">{{ course.instructor }}</h6>
+                            <p class="card-text">{{ course.description }}</p>
+                            <span><font-awesome-icon icon="fa-solid fa-user"></font-awesome-icon> {{ course.enrollments }}</span>
+                            <span><font-awesome-icon icon="fa-solid fa-tag"></font-awesome-icon> {{ course.category }}</span>
+                            <span v-if="course.isFree" class="badge rounded-pill free-badge">Free</span>
+                            <span v-else class="badge rounded-pill price-badge">{{ course.price }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-4 dots" style="color: #40c4ff">
+                <span><font-awesome-icon icon="fa-solid fa-circle"></font-awesome-icon></span>
+                <span><font-awesome-icon icon="fa-solid fa-circle"></font-awesome-icon></span>
+                <span><font-awesome-icon icon="fa-solid fa-circle"></font-awesome-icon></span>
+            </div>
+            <div class="d-flex flex-column topButton" style="top: 90%">
+                <font-awesome-icon icon="fa-solid fa-chevron-up" class="w-100"></font-awesome-icon>
+                <p>TOP</p>
             </div>
         </div>
     </div>
@@ -254,13 +321,15 @@ h2 {
             font-size: smaller;
             font-weight: bolder;
         }
+    }
+}
 
-        span {
-            margin: 0 10px;
+.dots {
+    span {
+        margin: 0 10px;
 
-            &:not(:nth-child(2)) {
-                opacity: 0.5;
-            }
+        &:not(:nth-child(2)) {
+            opacity: 0.5;
         }
     }
 }
@@ -284,6 +353,8 @@ h2 {
 }
 
 .right-column {
+    position: relative;
+
     p {
         color: #808080;
         margin-bottom: 40px;
@@ -291,6 +362,63 @@ h2 {
 
     span {
         color: #40c4ff;
+    }
+
+    img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100px;
+    }
+}
+
+.courses-container {
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.card {
+    border: 1px solid #f2f2f2;
+    border-radius: 0px;
+
+    .card-body {
+        position: relative;
+    }
+
+    .card-img-top {
+        border-radius: 0px;
+    }
+
+    .card-title {
+        font-family: "Times New Roman", 'serif';
+        font-weight: bold;
+    }
+
+    .card-subtitle {
+        color: #ababab;
+    }
+
+    span {
+        color: #ababab;
+        margin-right: 10px;
+        text-transform: uppercase;
+        font-size: small;
+        font-weight: bold;
+    }
+
+    .badge {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+    }
+
+    .free-badge {
+        background-color: #ffd740;
+    }
+
+    .price-badge {
+        background-color: #40c4ff;
     }
 }
 

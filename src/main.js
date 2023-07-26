@@ -8,7 +8,9 @@ import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faTag } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faSearch, faBagShopping, faBars, faChevronUp, faCircle);
+library.add(faSearch, faBagShopping, faBars, faChevronUp, faCircle, faUser, faTag);
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')

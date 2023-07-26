@@ -196,7 +196,8 @@ export default {
         </div>
         <div class="container-fluid d-flex flex-column align-items-center justify-content-center courses-container">
             <h2 class="fw-bold mt-5 mb-3">Popular Online Courses</h2>
-            <p class="px-5 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus earum perspiciatis quidem soluta tempore! Culpa nemo nostrum optio provident voluptatem!</p>
+            <p class="px-5 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus earum
+                perspiciatis quidem soluta tempore! Culpa nemo nostrum optio provident voluptatem!</p>
             <div class="row my-5">
                 <div class="col-4 px-5" v-for="course in courses" :key="course.id">
                     <div class="card">
@@ -205,8 +206,12 @@ export default {
                             <h5 class="card-title">{{ course.title }}</h5>
                             <h6 class="card-subtitle mb-4">{{ course.instructor }}</h6>
                             <p class="card-text">{{ course.description }}</p>
-                            <span><font-awesome-icon icon="fa-solid fa-user"></font-awesome-icon> {{ course.enrollments }}</span>
-                            <span><font-awesome-icon icon="fa-solid fa-tag"></font-awesome-icon> {{ course.category }}</span>
+                            <span><font-awesome-icon icon="fa-solid fa-user"></font-awesome-icon> {{
+                                    course.enrollments
+                                }}</span>
+                            <span><font-awesome-icon icon="fa-solid fa-tag"></font-awesome-icon> {{
+                                    course.category
+                                }}</span>
                             <span v-if="course.isFree" class="badge rounded-pill free-badge">Free</span>
                             <span v-else class="badge rounded-pill price-badge">{{ course.price }}</span>
                         </div>
@@ -222,6 +227,109 @@ export default {
                 <font-awesome-icon icon="fa-solid fa-chevron-up" class="w-100"></font-awesome-icon>
                 <p>TOP</p>
             </div>
+        </div>
+        <div class="container-fluid px-5">
+            <h2 class="fw-bold fs-1 text-center mt-5">Pricing Plans</h2>
+            <p class="text-center px-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus,
+                laborum?</p>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>
+                        <h5 class="fw-bold text-center">Save up to 40% by paying weekly</h5>
+                    </th>
+                    <th>
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <img src="../assets/img/h5-custom-icon-7.png" alt="" style="width: 80px" class="mb-3">
+                            <h5 class="fw-bold">Standard</h5>
+                            <h6 class="fw-bold">$12</h6>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <img src="../assets/img/h5-custom-icon-8.png" alt="" style="width: 80px" class="mb-3">
+                            <h5 class="fw-bold">Professional</h5>
+                            <h6 class="fw-bold">$59</h6>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <img src="../assets/img/h5-custom-icon-9.png" alt="" style="width: 80px" class="mb-3">
+                            <h5 class="fw-bold">Advanced</h5>
+                            <h6 class="fw-bold">$88</h6>
+                        </div>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td style="width: 20%">Number of Courses</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>Time</td>
+                    <td>15 Days</td>
+                    <td>30 Days</td>
+                    <td>30 Days</td>
+                </tr>
+                <tr>
+                    <td>Web Designing</td>
+                    <td>&check;</td>
+                    <td>&check;</td>
+                    <td>&check;</td>
+                </tr>
+                <tr>
+                    <td>Human-Centered Design</td>
+                    <td>&check;</td>
+                    <td>&check;</td>
+                    <td>&check;</td>
+                </tr>
+                <tr>
+                    <td>Basic Marketing</td>
+                    <td>&cross;</td>
+                    <td>&check;</td>
+                    <td>&check;</td>
+                </tr>
+                <tr>
+                    <td>Python for Everybody</td>
+                    <td>&cross;</td>
+                    <td>&check;</td>
+                    <td>&check;</td>
+                </tr>
+                <tr>
+                    <td>Android Developer</td>
+                    <td>&cross;</td>
+                    <td>&cross;</td>
+                    <td>&check;</td>
+                </tr>
+                <tr>
+                    <td>Riga 8</td>
+                    <td>&cross;</td>
+                    <td>&cross;</td>
+                    <td>&check;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button class="btn">Get it now</button>
+                    </td>
+                    <td>
+                        <button class="btn">Get it now</button>
+                    </td>
+                    <td>
+                        <button class="btn">Get it now</button>
+                    </td>
+
+                </tr>
+                </tbody>
+            </table>
+            <div class="d-flex flex-column topButton" style="top: 90%">
+                <font-awesome-icon icon="fa-solid fa-chevron-up" class="w-100"></font-awesome-icon>
+                <p>TOP</p>
+            </div>
+
         </div>
     </div>
 </template>
@@ -419,6 +527,39 @@ h2 {
 
     .price-badge {
         background-color: #40c4ff;
+    }
+}
+
+th {
+    background-color: #f2f8fc;
+    border-top: 4px solid #d6f2ff;
+
+    &:first-child {
+        background-color: white;
+    }
+}
+
+td {
+    text-align: center;
+    color: #808080;
+
+    > button {
+        border: 2px solid #ababab;
+        border-radius: 0px;
+        text-transform: uppercase;
+        font-size: small;
+        font-weight: bold;
+        padding: 10px 20px;
+        color: #808080;
+
+    }
+
+    &:nth-child(3) {
+        > button {
+            background-color: #40c4ff;
+            color: white;
+            border: none;
+        }
     }
 }
 

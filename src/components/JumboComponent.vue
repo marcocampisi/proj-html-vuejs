@@ -26,6 +26,7 @@ export default {
     width: 100vw;
     height: 600px;
     background-image: url('../assets/img/h5-slide-3-background.jpg');
+    background-size: cover;
 
     > h1 {
         font-family: "Times New Roman", 'serif'

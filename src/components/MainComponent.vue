@@ -20,7 +20,7 @@ export default {
                     id: 1,
                     title: 'What We Do',
                     content: 'Lorem ipsum',
-                    isActive: false
+                    isActive: true
                 },
                 {
                     id: 2,
@@ -53,8 +53,7 @@ export default {
                     isActive: false
                 }
 
-            ],
-            activeRowIndex: 0
+            ]
         }
     },
     computed: {
@@ -138,12 +137,23 @@ export default {
             </div>
         </div>
         <div class="container-fluid d-flex py-5">
-            <div id="selectInfo">
-                <ul class="left-column">
+            <div>
+                <ul class="left-column mx-4">
                     <li v-for="row in rows" :key="row.id" @click="activeRow(row)" :class="{ 'active': row.isActive }">
                         {{ row.title }}
                     </li>
                 </ul>
+            </div>
+            <div class="container right-column">
+                <h2 class="fw-bold">Learning Possibilities</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cumque doloremque error eum
+                    eveniet, expedita, illo ipsa laudantium magni, molestias nostrum officia provident recusandae
+                    reiciendis sapiente soluta tenetur? Accusamus at, dolor dolore dolorem doloremque incidunt quae
+                    recusandae voluptatibus? Consequatur, doloremque!</p>
+                <p><span>&check;</span> We enrich lives through learning.</p>
+                <p><span>&check;</span> Maximizing potential through individual attention.</p>
+                <p><span>&check;</span> The trusted name for specialized training.</p>
+                <p><span>&check;</span> People teach. People learn. This is where they connect.</p>
             </div>
         </div>
     </div>
@@ -255,23 +265,33 @@ h2 {
     }
 }
 
-#selectInfo {
-    .left-column {
-        li {
-            list-style-type: none;
-            padding: 20px 30px;
-            border: 1px solid #f2f2f2;
-            color: #595959;
-            cursor: pointer;
-            font-family: "Times New Roman", 'serif';
-            font-weight: bold;
+.left-column {
+    li {
+        list-style-type: none;
+        padding: 20px 30px;
+        border: 1px solid #f2f2f2;
+        color: #595959;
+        cursor: pointer;
+        font-family: "Times New Roman", 'serif';
+        font-weight: bold;
 
-            &.active {
-                background-color: #fbfbfc;
-                border-left: 5px solid #40c4ff;
-                color: #40c4ff;
-            }
+        &.active {
+            background-color: #fbfbfc;
+            border-left: 5px solid #40c4ff;
+            color: #40c4ff;
         }
     }
 }
+
+.right-column {
+    p {
+        color: #808080;
+        margin-bottom: 40px;
+    }
+
+    span {
+        color: #40c4ff;
+    }
+}
+
 </style>

@@ -1,5 +1,5 @@
 <script>
-import { store } from '../store.js';
+import {store} from '../store.js';
 import JumboComponent from "./JumboComponent.vue";
 
 export default {
@@ -18,9 +18,9 @@ export default {
 <template>
     <header>
         <nav class="navbar">
-            <div class="container-fluid d-flex align-items-center justify-content-between">
-                <a class="navbar-brand" href>
-                    <img src="../assets/img/logo-light.png" alt="iAcademy" width="200px" class="mx-5">
+            <div class="container-fluid d-flex align-items-center">
+                <a class="navbar-brand" width="200px" href>
+                    <img src="../assets/img/logo-light.png" alt="iAcademy" class="mx-5 w-50">
                 </a>
                 <ul class="d-flex flex-row m-0">
                     <li class="nav-item">Home</li>
@@ -29,13 +29,12 @@ export default {
                     <li class="nav-item">Events</li>
                     <li class="nav-item">Pages</li>
                     <li class="nav-item">Elements</li>
-                </ul>
-                <ul class="d-flex flex-row m-0">
                     <li>
                         <font-awesome-icon icon="fa-solid fa-search"></font-awesome-icon>
                     </li>
-                    <li>
+                    <li class="position-relative">
                         <font-awesome-icon icon="fa-solid fa-bag-shopping"></font-awesome-icon>
+                        <span class="badge rounded-pill">0</span>
                     </li>
                     <li>
                         <font-awesome-icon icon="fa-solid fa-bars"></font-awesome-icon>
@@ -43,13 +42,18 @@ export default {
                 </ul>
             </div>
         </nav>
+        <JumboComponent/>
     </header>
-    <JumboComponent/>
+
 </template>
 
 <style lang="scss" scoped>
+header {
+    background-image: url('../assets/img/h5-slide-3-background.jpg');
+    position: relative;
+}
+
 nav {
-    position: absolute;
     width: 100vw;
 
     li {
@@ -59,11 +63,15 @@ nav {
         cursor: pointer;
         text-transform: uppercase;
         font-weight: bold;
-        font-size: .8rem;
-    }
-}
+        font-size: 1rem;
 
-JumboComponent {
-    position: relative;
+        > span {
+            background-color: #40c4ff;
+            font-size: .5rem;
+            position: absolute;
+            top: 0;
+            right: -10px;
+        }
+    }
 }
 </style>

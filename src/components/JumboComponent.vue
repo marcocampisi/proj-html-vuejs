@@ -1,5 +1,5 @@
 <script>
-import { store } from '../store.js';
+import {store} from '../store.js';
 
 export default {
     name: "JumboComponent",
@@ -18,6 +18,11 @@ export default {
             exercitationem expedita fuga minima provident? Aut consequuntur esse natus necessitatibus recusandae sit
             voluptas.</p>
         <button class="btn btn-primary p-3">Register now</button>
+        <div class="my-4 dots">
+            <span><font-awesome-icon icon="fa-solid fa-circle"></font-awesome-icon></span>
+            <span><font-awesome-icon icon="fa-solid fa-circle"></font-awesome-icon></span>
+            <span><font-awesome-icon icon="fa-solid fa-circle"></font-awesome-icon></span>
+        </div>
     </div>
 </template>
 
@@ -25,7 +30,6 @@ export default {
 .container-fluid {
     width: 100vw;
     height: 600px;
-    background-image: url('../assets/img/h5-slide-3-background.jpg');
     background-size: cover;
 
     > h1 {
@@ -36,6 +40,22 @@ export default {
         background-color: #40c4ff;
         border: none;
         border-radius: 0px;
+    }
+}
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    span {
+        margin: 0 10px;
+        color: white;
+
+        &:not(:nth-child(2)) {
+            opacity: 0.5;
+        }
     }
 }
 </style>

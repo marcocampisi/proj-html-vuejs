@@ -283,50 +283,50 @@ export default {
                 </tr>
                 <tr>
                     <td>Web Designing</td>
-                    <td>&check;</td>
-                    <td>&check;</td>
-                    <td>&check;</td>
+                    <td><span>&check;</span></td>
+                    <td><span>&check;</span></td>
+                    <td><span>&check;</span></td>
                 </tr>
                 <tr>
                     <td>Human-Centered Design</td>
-                    <td>&check;</td>
-                    <td>&check;</td>
-                    <td>&check;</td>
+                    <td><span>&check;</span></td>
+                    <td><span>&check;</span></td>
+                    <td><span>&check;</span></td>
                 </tr>
                 <tr>
                     <td>Basic Marketing</td>
                     <td>&cross;</td>
-                    <td>&check;</td>
-                    <td>&check;</td>
+                    <td><span>&check;</span></td>
+                    <td><span>&check;</span></td>
                 </tr>
                 <tr>
                     <td>Python for Everybody</td>
                     <td>&cross;</td>
-                    <td>&check;</td>
-                    <td>&check;</td>
+                    <td><span>&check;</span></td>
+                    <td><span>&check;</span></td>
                 </tr>
                 <tr>
                     <td>Android Developer</td>
                     <td>&cross;</td>
                     <td>&cross;</td>
-                    <td>&check;</td>
+                    <td><span>&check;</span></td>
                 </tr>
                 <tr>
                     <td>Business English</td>
                     <td>&cross;</td>
                     <td>&cross;</td>
-                    <td>&check;</td>
+                    <td><span>&check;</span></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>
-                        <button class="btn">Get it now</button>
+                        <button>Get it now</button>
                     </td>
                     <td>
-                        <button class="btn">Get it now</button>
+                        <button>Get it now</button>
                     </td>
                     <td>
-                        <button class="btn">Get it now</button>
+                        <button>Get it now</button>
                     </td>
 
                 </tr>
@@ -561,6 +561,7 @@ td {
         font-weight: bold;
         padding: 10px 20px;
         color: #808080;
+        background: none;
 
     }
 
@@ -570,6 +571,10 @@ td {
             color: white;
             border: none;
         }
+    }
+
+    span {
+        color: #40c4ff;
     }
 }
 

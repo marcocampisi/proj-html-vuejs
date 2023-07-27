@@ -13,7 +13,7 @@ export default {
 
 <template>
     <div class="container-fluid footerContainer">
-        <div class="container-fluid d-flex justify-content-center px-5">
+        <div class="container-fluid d-flex justify-content-center px-5 pb-5">
             <div class="col-3">
                 <img src="../assets/img/logo-light.png" alt="iAcademy">
                 <p class="pb-5">Providing Life Changing Experiences Through Education. Class That Fit Your Busy Life.
@@ -49,12 +49,25 @@ export default {
                 <img src="../assets/img/footer-img-1.png" alt="">
             </div>
         </div>
+        <div class="container-fluid d-flex justify-content-between" id="footerInfo">
+            <div id="footerLeft">
+                <p>Copyrights 2017 &copy;Mikado Themes </p>
+            </div>
+            <div id="footerRight">
+                <span>CALL +44 300 303 0266</span>
+                <span>FOLLOW US</span>
+                <font-awesome-icon icon="fa-brands fa-twitter" class="footerIcon"></font-awesome-icon>
+                <font-awesome-icon icon="fa-brands fa-instagram" class="footerIcon"></font-awesome-icon>
+                <font-awesome-icon icon="fa-brands fa-facebook" class="footerIcon"></font-awesome-icon>
+
+            </div>
+        </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .footerContainer {
-    height: 600px;
+    height: 650px;
     background-color: #222222;
     padding-top: 150px;
 
@@ -85,6 +98,28 @@ export default {
         h6 {
             color: #ababab;
             margin-bottom: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+#footerInfo {
+    padding-top: 60px;
+    border-top: 1px solid #595959;
+
+    #footerLeft {
+        color: #ababab;
+    }
+
+    #footerRight {
+        color: #ababab;
+
+        span {
+            margin: 0 10px;
+        }
+
+        .footerIcon {
+            margin: 0 10px;
             cursor: pointer;
         }
     }

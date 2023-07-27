@@ -12,7 +12,10 @@ import {faUser} from "@fortawesome/free-solid-svg-icons";
 import {faTag} from "@fortawesome/free-solid-svg-icons";
 import {faPhoneVolume} from "@fortawesome/free-solid-svg-icons";
 import {faClock} from "@fortawesome/free-regular-svg-icons";
+import {faTwitter} from "@fortawesome/free-brands-svg-icons";
+import {faInstagram} from "@fortawesome/free-brands-svg-icons";
+import {faFacebook} from "@fortawesome/free-brands-svg-icons";
 
-library.add(faSearch, faBagShopping, faBars, faChevronUp, faCircle, faUser, faTag, faPhoneVolume, faClock);
+library.add(faSearch, faBagShopping, faBars, faChevronUp, faCircle, faUser, faTag, faPhoneVolume, faClock, faTwitter, faInstagram, faFacebook);
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')

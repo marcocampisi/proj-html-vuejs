@@ -86,6 +86,13 @@ export default {
                     price: '$20',
                     image: '../src/assets/img/course-12-f-img.jpg',
                 }
+            ],
+            imageSources: [
+                '../src/assets/img/h5-client-5.png',
+                '../src/assets/img/h5-client-1.png',
+                '../src/assets/img/h5-client-2.png',
+                '../src/assets/img/h5-client-3.png',
+
             ]
         }
     },
@@ -228,7 +235,7 @@ export default {
                 <p>TOP</p>
             </div>
         </div>
-        <div class="container-fluid px-5">
+        <div class="container-fluid px-5" id="tableContainer">
             <h2 class="fw-bold fs-1 text-center mt-5">Pricing Plans</h2>
             <p class="text-center px-5 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus,
                 laborum?</p>
@@ -305,7 +312,7 @@ export default {
                     <td>&check;</td>
                 </tr>
                 <tr>
-                    <td>Riga 8</td>
+                    <td>Business English</td>
                     <td>&cross;</td>
                     <td>&cross;</td>
                     <td>&check;</td>
@@ -330,6 +337,9 @@ export default {
                 <p>TOP</p>
             </div>
 
+        </div>
+        <div class="container-fluid d-flex justify-content-center p-5 my-5">
+            <img v-for="imageSrc in imageSources" :key="imageSrc" :src="imageSrc" alt="Immagine">
         </div>
     </div>
 </template>
@@ -561,6 +571,11 @@ td {
             border: none;
         }
     }
+}
+
+#tableContainer {
+    border-bottom: 1px solid #f2f2f2;
+    padding-bottom: 100px;
 }
 
 </style>
